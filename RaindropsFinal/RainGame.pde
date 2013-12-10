@@ -8,26 +8,28 @@ class RainGame {
   Raindrop[] drops = new Raindrop [1];
   Score s1;
   float r;
+  boolean gameOver;
 
-//Sets the variables of the RainGame object to other objects
+  //Sets the variables of the RainGame object to other objects
   RainGame() {
     r = 50;
     c1 = new Catcher();
     s1 = new Score();
     drops[0] = new Raindrop(width/2, 0.05, r);
+    gameOver = false;
   }
 
-//Displays the catcher on the mouse and also keeps the score
+  //Displays the catcher on the mouse and also keeps the score
   void run() {
     c1.display(mouseX, mouseY);
     s1.keep();
-
+    gameOver = s1.gameOver();
     for (int i = 0; i < drops.length; i++) {
       drops[i].reset(c1, s1);
       drops[i].display();
     }
 
-//The if-statemnent that governs the addition of drops to the array using the apend function
+    //The if-statemnent that governs the addition of drops to the array using the apend function
 
     if (s1.levelUp) {
 

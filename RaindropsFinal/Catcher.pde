@@ -3,7 +3,7 @@ class Catcher {
   float r;
 
   Catcher() {
-    r = 200;
+    r = 20;
   }
 
 

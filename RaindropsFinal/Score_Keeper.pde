@@ -6,6 +6,7 @@ class Score {
   int counter;
   boolean levelUp;
   int missedBalls;
+  boolean lose;
 
   Score() {
     score = 0;
@@ -22,8 +23,11 @@ class Score {
       levelUp = true;
     }
     if (missedBalls == 3) {
-      noLoop();
+      lose = true;
     }
+  }
+  boolean gameOver() {
+    return lose;
   }
 }
 
