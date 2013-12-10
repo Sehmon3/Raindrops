@@ -14,7 +14,7 @@
 Menu m1;
 
 void setup() {
-  size(800, 600);
+  size(400, 400);
   m1 = new Menu(2, width/2, height/2, "Start", "Instructions");
   //r1 = new RainGame();
 }
