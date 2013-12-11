@@ -43,6 +43,7 @@ class RainGame {
         s1.levelUp = false;
       }
     }
+    
   }
 }
 

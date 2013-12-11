@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //class Menu {
 //  PVector location;
 //  float boxHeight = 30;
@@ -26,7 +26,7 @@
 //    }
 //  }
 //}
-=======
+
 class Menu {
   PVector location;
   Box[] boxes;
@@ -47,5 +47,5 @@ class Menu {
     }
   }
 }
->>>>>>> Added timer to RainGame, didnt finish
+
 
