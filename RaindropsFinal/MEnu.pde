@@ -1,11 +1,11 @@
-class Menu {
-  PVector location;
-  float boxHeight = 30;
-  float boxWidth = 100;
-
-  class Box extends Menu{
-      
-  }
+//class Menu {
+//  PVector location;
+//  float boxHeight = 30;
+//  float boxWidth = 100;
+//
+//  class Box extends Menu{
+//      
+//  }
 //  Menu(int _boxes, int x, int y, String a, String b) {
 //
 //    boxes = new Box [_boxes];
@@ -24,5 +24,5 @@ class Menu {
 //      boxes[i].display();
 //    }
 //  }
-}
+//}
 

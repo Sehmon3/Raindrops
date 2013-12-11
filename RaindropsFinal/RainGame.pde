@@ -3,7 +3,7 @@
 
 class RainGame {
 
-  // A new catcher, raindrop array, score keeper, and r variable to adjust the size of the drops falling
+  // A new catcher, raindrop array, timer,  score keeper, and r variable to adjust the size of the drops falling
   Catcher c1;
   Raindrop[] drops = new Raindrop [1];
   Score s1;
