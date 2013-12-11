@@ -10,23 +10,24 @@
 
 //Starts a new RainGame Object
 
-RainGame r1;
+//RainGame r1;
+StartScreen s1;
 
 void setup() {
   size(800, 600);
-  r1 = new RainGame();
+  s1 = new StartScreen("Rain", "Start", "Instructions");
+  //  r1 = new RainGame();
 }
 
 void draw() {
   background(255);
-  r1.run();
-  println(r1.gameOver);
+  s1.display();
+  //  r1.run();
 }
 
 void mousePressed() {
   if (mousePressed) {
-    r1 = new RainGame();
+    //    r1 = new RainGame();
   }
 }
-
 
