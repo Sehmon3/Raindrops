@@ -13,7 +13,7 @@
 RainGame r1;
 
 void setup() {
-  size(200, 200);
+  size(800, 600);
   r1 = new RainGame();
 }
 
