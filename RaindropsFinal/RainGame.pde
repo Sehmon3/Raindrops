@@ -7,6 +7,7 @@ class RainGame {
   Catcher c1;
   Raindrop[] drops = new Raindrop [1];
   Score s1;
+  Timer t1;
   float r;
   boolean gameOver;
 
@@ -15,6 +16,7 @@ class RainGame {
     r = 50;
     c1 = new Catcher();
     s1 = new Score();
+    t1 = new Timer();
     drops[0] = new Raindrop(width/2, 0.05, r);
     gameOver = false;
   }
