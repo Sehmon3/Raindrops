@@ -10,7 +10,7 @@ class Raindrop {
 
   Raindrop(int _x, float _speed, float _r) {
     location = new PVector(_x, -2*r);
-    speed = new PVector(0, random(4, 8));
+    speed = new PVector(0, random(2, 5));
     r = _r;
     nextdrop = int(random(0, 10));
     c = color(0, 100, 255);
