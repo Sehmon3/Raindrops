@@ -1,4 +1,5 @@
 class StartScreen {
+<<<<<<< HEAD
   Button b1;
   Button b2;
   int w = 150;
@@ -16,6 +17,27 @@ class StartScreen {
     translate(width/2, height/2);
     b1.display();
     b2.display();
+=======
+  String gameTitle;
+  String title1;
+  String title2;
+
+  StartScreen(String title, String t1, String t2) {
+    gameTitle = "Rain";
+    title1 = t1;
+    title2 = t2;
+  }
+
+  void display() {
+    background(0, 150, 255);
+    textAlign(CENTER);
+    textSize(50);
+    text(gameTitle, width/2, height/5);
+
+    textSize(30);
+    text(title1, width/3, 5*height/6);
+    text(title2, 2*width/3, 5*height/6);
+>>>>>>> origin/title_screen
   }
 }
 
