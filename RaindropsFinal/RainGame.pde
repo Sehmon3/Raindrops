@@ -23,7 +23,7 @@ class RainGame {
 
   //Displays the catcher on the mouse and also keeps the score
   void run() {
-    c1.display(mouseX, mouseY);
+    c1.display(mouseX, (2*width/3));
     s1.keep();
     gameOver = s1.gameOver();
     for (int i = 0; i < drops.length; i++) {
