@@ -25,6 +25,7 @@ class RainGame {
   void run() {
     c1.display(mouseX, (2*width/3));
     s1.keep();
+    s1.display();
     gameOver = s1.gameOver();
     for (int i = 0; i < drops.length; i++) {
       drops[i].reset(c1, s1);
@@ -43,7 +44,6 @@ class RainGame {
         s1.levelUp = false;
       }
     }
-    
   }
 }
 

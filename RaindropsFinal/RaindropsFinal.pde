@@ -10,40 +10,40 @@
 
 //Starts a new RainGame Object
 
-<<<<<<< HEAD
+import fisica.util.nonconvex.*;
+import fisica.*;
+
+
+BalanceGame b1;
 RainGame r1;
 StartScreen s1;
+EndScreen e1;
+
 boolean run;
 
 
 void setup() {
   size(800, 600);
+  Fisica.init(this);
+  b1 = new BalanceGame();
   r1 = new RainGame();
-
-  s1 = new StartScreen(0, 0, 0, 75, "Start", "Credits");
-=======
-//RainGame r1;
-StartScreen s1;
-
-void setup() {
-  size(800, 600);
-  s1 = new StartScreen("Rain", "Start", "Instructions");
-  //  r1 = new RainGame();
->>>>>>> origin/title_screen
+  s1 = new StartScreen(width/2, height/2, width/2, height/2 + 75, "Start", "Credits");
+  e1 = new EndScreen();
 }
+
+
 
 void draw() {
   background(255);
-<<<<<<< HEAD
   if (run) {
+    b1.run();
     r1.run();
   }  
   else {
     s1.run();
   }
-
-  println(s1.b1.isPressed());
 }
+
 
 void mousePressed() {
 
@@ -52,15 +52,31 @@ void mousePressed() {
   }
   else if (s1.b2.isPressed()) {
     run = true;
-=======
-  s1.display();
-  //  r1.run();
+
+    s1.run();
+    //  r1.run();
+  }
 }
 
-void mousePressed() {
-  if (mousePressed) {
-    //    r1 = new RainGame();
->>>>>>> origin/title_screen
+void reset() {
+  run = !run;
+}
+
+
+void keyPressed() {
+
+  if (key == 'r') {
+    reset();
+    r1 = new RainGame();
+    b1 = new BalanceGame();
+  }
+}
+
+void endGame() {
+  if (b1.gameOver || r1.gameOver) {
+
+    e1.display();
+    reset();
   }
 }
 

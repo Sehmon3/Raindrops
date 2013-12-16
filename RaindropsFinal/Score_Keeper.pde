@@ -17,7 +17,7 @@ class Score {
 
   void keep() {
 
-    if (counter - 6 >= 0) {
+    if (counter - 12 >= 0) {
       background(255);
       counter = 0;
       levelUp = true;
@@ -28,6 +28,12 @@ class Score {
   }
   boolean gameOver() {
     return lose;
+  }
+
+  void display() {
+    fill(0);
+    textSize(30);
+    text(score, 50, height-2);
   }
 }
 

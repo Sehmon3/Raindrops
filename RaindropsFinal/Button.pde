@@ -11,6 +11,7 @@ class Button {
   } 
 
   void display() {
+    stroke(1);
     rectMode(CENTER);
     textAlign(CENTER);
     fill(255);
@@ -22,9 +23,14 @@ class Button {
 
   boolean isPressed() {
     //checking if the mouse is clicked within the button
-    if (mouseX >= location.x - size.x/2 /* && mouseX <= location.x + size.x/2 && mouseY >= location.y - size.y/2 && mouseY <= location.y + size.y/2 */) {
 
-      return true;
+    if (mouseX >= location.x - size.x/2  && mouseX <= location.x + size.x/2 && mouseY >= location.y - size.y/2 && mouseY <= location.y + size.y/2 ) {
+      if (mousePressed) {
+        return true;
+      }
+      else {
+        return false;
+      }
     }
     else {
       return false;
