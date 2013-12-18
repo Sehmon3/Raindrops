@@ -3,12 +3,14 @@ class BalanceGame {
 
   boolean gameOver = false;
   boolean run;
+  PImage kanye;
 
   FWorld f;
 
 
   BalanceGame() {
 
+    kanye = loadImage("Kanye Head.png");
     f = new FWorld();
 
     FCircle anchor = new FCircle(1);
@@ -30,13 +32,15 @@ class BalanceGame {
     f.add(ball);
     ball.setNoStroke();
     ball.setFill(155, 40, 40);
+    ball.setDensity(0.1);
+    ball.attachImage(kanye);
 
     FRevoluteJoint vertex = new FRevoluteJoint(bar, anchor);
     f.add(vertex);
     vertex.setNoStroke();
 
 
-    ball.setPosition(width/2 - 3, height/4);
+    ball.setPosition(width/2 - width/50, height/4);
   }
 
   void run() {
@@ -45,22 +49,29 @@ class BalanceGame {
 
     if (keyPressed) {
       ArrayList <FBody> bodies = f.getBodies();
-      FBody f = bodies.get(1);
-      FBody circle = bodies.get(0);
-      if (circle.getY() <= width/2 + 150) {
-        gameOver = true;
-      }
-      
+      FBody b = bodies.get(1);
+
+
       if (key == 'a') {
-        f.adjustRotation(-0.02);
+        b.adjustRotation(-0.02);
       }
       else if (key == 'd') {
-        f.adjustRotation(0.02);
+        b.adjustRotation(0.02);
       }
     }
+
     background(255);
     f.step();
     f.draw();
+    circleFell();
+  }
+
+  void circleFell() {
+    ArrayList <FBody> bodiesC = f.getBodies();
+    FBody c = bodiesC.get(0);
+    if (c.getY() >=2*width/3) {
+      gameOver = true;
+    }
   }
 }
 

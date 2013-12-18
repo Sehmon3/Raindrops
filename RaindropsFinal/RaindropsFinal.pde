@@ -20,6 +20,7 @@ StartScreen s1;
 EndScreen e1;
 
 boolean run;
+boolean over = true;
 
 
 void setup() {
@@ -35,26 +36,34 @@ void setup() {
 
 void draw() {
   background(255);
-  if (run) {
-    b1.run();
-    r1.run();
-  }  
-  else {
-    s1.run();
+  if (over) {
+    if (run) {
+      if (!b1.gameOver) {
+        b1.run();
+      }
+      r1.run();
+    }  
+    else {
+      s1.run();
+    }
+
+    endGame();
   }
 }
 
 
+
 void mousePressed() {
+  if (!run) {
+    if (s1.b1.isPressed()) {
+      run = true;
+    }
+    else if (s1.b2.isPressed()) {
+      run = true;
 
-  if (s1.b1.isPressed()) {
-    run = true;
-  }
-  else if (s1.b2.isPressed()) {
-    run = true;
-
-    s1.run();
-    //  r1.run();
+      s1.run();
+      //  r1.run();
+    }
   }
 }
 
@@ -74,9 +83,9 @@ void keyPressed() {
 
 void endGame() {
   if (b1.gameOver || r1.gameOver) {
+    run = !run;
 
-    e1.display();
-    reset();
+    e1.display(r1.s1);
   }
 }
 

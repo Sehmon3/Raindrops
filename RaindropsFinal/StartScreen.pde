@@ -14,6 +14,7 @@ class StartScreen {
   void run() {
     background(255);
     rectMode(CENTER);
+    textAlign(CENTER);
     b1.display();
     b2.display();
   }
