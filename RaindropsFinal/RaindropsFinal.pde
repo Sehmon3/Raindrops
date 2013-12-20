@@ -9,40 +9,55 @@
 
 
 //Starts a new RainGame Object
+//Imports the physics library Fisica
 
 import fisica.util.nonconvex.*;
 import fisica.*;
 
+//Starts the components needed for a MultiTask Game
 
 BalanceGame b1;
 RainGame r1;
 StartScreen s1;
 EndScreen e1;
 
+//Booleans to determine if the game has started or not
+
 boolean run;
 boolean over = true;
 
-
+//Initializes the declared variables
 void setup() {
   size(800, 600);
+  
+  //Needed to start the Fisica Physics Library
   Fisica.init(this);
+  
+  //The four objects needed to create a multiTask Game are created here
   b1 = new BalanceGame();
   r1 = new RainGame();
-  s1 = new StartScreen(width/2, height/2, width/2, height/2 + 75, "Start", "Credits");
+  s1 = new StartScreen(width/2, 4*height/7, width/2, 4*height/7 + 75, "Start", "Credits");  //Sets the variables for the start box and credit box
   e1 = new EndScreen();
 }
 
 
 
+//Draws the game
 void draw() {
   background(255);
+  
+  //Variable to determine if the game is over
   if (over) {
+    
+    //Variale to tell if game should be running
     if (run) {
+      //Variable that should be false when the game starts
       if (!b1.gameOver) {
         b1.run();
       }
       r1.run();
     }  
+    //else show the start screen
     else {
       s1.run();
     }

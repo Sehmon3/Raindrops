@@ -12,6 +12,7 @@ class BalanceGame {
 
     kanye = loadImage("Kanye Head.png");
     f = new FWorld();
+    f.setEdges();
 
     FCircle anchor = new FCircle(1);
     f.add(anchor);
@@ -44,13 +45,12 @@ class BalanceGame {
   }
 
   void run() {
-
     run = true;
 
     if (keyPressed) {
       ArrayList <FBody> bodies = f.getBodies();
-      FBody b = bodies.get(1);
 
+      FBody b = bodies.get(1);
 
       if (key == 'a') {
         b.adjustRotation(-0.02);
@@ -71,6 +71,7 @@ class BalanceGame {
     FBody c = bodiesC.get(0);
     if (c.getY() >=2*width/3) {
       gameOver = true;
+      c.setPosition((width/2)-20, height/3);
     }
   }
 }

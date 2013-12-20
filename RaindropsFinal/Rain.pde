@@ -5,6 +5,9 @@ class Raindrop {
   float r;
   int nextdrop;
   color c;
+  PImage image;
+  PImage[] images = new PImage [5];
+  float probability;
 
 //Sets vairables to arbitrary locations to get the program started
 

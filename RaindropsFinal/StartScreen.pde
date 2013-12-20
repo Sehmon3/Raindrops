@@ -13,10 +13,15 @@ class StartScreen {
 
   void run() {
     background(255);
-    rectMode(CENTER);
     textAlign(CENTER);
+    rectMode(CENTER);
+
     b1.display();
     b2.display();
+    
+    textSize(100);
+    fill(0);
+    text("MULTITASK", width/2, height/4);
   }
 }
 
