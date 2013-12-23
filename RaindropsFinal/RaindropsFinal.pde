@@ -51,6 +51,7 @@ void draw() {
     
     //Variale to tell if game should be running
     if (run) {
+      
       //Variable that should be false when the game starts
       if (!b1.gameOver) {
         b1.run();
@@ -67,7 +68,7 @@ void draw() {
 }
 
 
-
+// Sets run to true if a button is pressed while the game isnt running ---> should start the game
 void mousePressed() {
   if (!run) {
     if (s1.b1.isPressed()) {
@@ -82,11 +83,12 @@ void mousePressed() {
   }
 }
 
+//function for the reset button
 void reset() {
   run = !run;
 }
 
-
+//resets the game if 'r' is pressed
 void keyPressed() {
 
   if (key == 'r') {

@@ -1,15 +1,17 @@
+//A button class for the start screen
 class Button {
   PVector size;
   PVector location;
   String text;
 
-
+  
   Button(int x, int y, int w, int h, String s) {
     location = new PVector(x, y);
     size = new PVector(w, h);
     text = s;
   } 
 
+  //Displays a box with the submitted text
   void display() {
     stroke(1);
     rectMode(CENTER);
