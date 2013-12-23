@@ -22,7 +22,7 @@ StartScreen s1;
 EndScreen e1;
 
 //Booleans to determine if the game has started or not
-
+ 
 boolean run;
 boolean over = true;
 

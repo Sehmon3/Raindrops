@@ -15,10 +15,12 @@ class Score {
     missedBalls = 0;
   }
 
+//Manages the score and ball increment
   void keep() {
-
+    
+    //If 12 ball have passed by the screen then the counter, or amount of balls increases
+    
     if (counter - 12 >= 0) {
-      background(255);
       counter = 0;
       levelUp = true;
     }
@@ -26,6 +28,7 @@ class Score {
       lose = true;
     }
   }
+  //Returns the boolean lose, which is true when three ball have reached the bottom of the screen
   boolean gameOver() {
     return lose;
   }
