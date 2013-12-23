@@ -22,17 +22,17 @@ StartScreen s1;
 EndScreen e1;
 
 //Booleans to determine if the game has started or not
- 
+
 boolean run;
 boolean over = true;
 
 //Initializes the declared variables
 void setup() {
   size(800, 600);
-  
+
   //Needed to start the Fisica Physics Library
   Fisica.init(this);
-  
+
   //The four objects needed to create a multiTask Game are created here
   b1 = new BalanceGame();
   r1 = new RainGame();
@@ -45,18 +45,20 @@ void setup() {
 //Draws the game
 void draw() {
   background(255);
-  
+
   //Variable to determine if the game is over
   if (over) {
-    
+
     //Variale to tell if game should be running
     if (run) {
-      
+
       //Variable that should be false when the game starts
       if (!b1.gameOver) {
         b1.run();
       }
-      r1.run();
+      if (!r1.gameOver) {
+        r1.run();
+      }
     }  
     //else show the start screen
     else {
