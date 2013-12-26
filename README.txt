@@ -4,9 +4,8 @@ Intro to Programming
 23 December 2013
 
 MULTITASK- How good are you?
-
 This game is based off of the popular flash game Multitask and your objective it to keep Kanye balancing on the bar for as long as you can. While you do this, you have to make sure the raindrops don't reach the bottom of the screen. When three raindrops have reached the bottom, or Kanye has fallen off of his pedestal, the game is over!
-
+-To play you need to install the Processing library Fisica. This can be done in the native processing window.
 Controls:
 -Mouse to move the rain catcher
 -A and D to move the balance pedestal
