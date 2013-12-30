@@ -53,10 +53,8 @@ void draw() {
     if (run) {
 
       //Variable that should be false when the game starts
-      if (!b1.gameOver) {
+      if (!b1.gameOver || !r1.gameOver) {
         b1.run();
-      }
-      if (!r1.gameOver) {
         r1.run();
       }
     }  
