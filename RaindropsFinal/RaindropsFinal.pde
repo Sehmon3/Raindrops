@@ -101,7 +101,6 @@ void keyPressed() {
 void endGame() {
   if (b1.gameOver || r1.gameOver) {
     run = !run;
-
     e1.display(r1.s1);
   }
 }
