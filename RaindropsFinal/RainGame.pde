@@ -35,8 +35,6 @@ class RainGame {
     //The if-statemnent that governs the addition of drops to the array using the apend function
 
     if (s1.levelUp) {
-
-      println("WAITING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
       if (frameCount % int(random(10, 60)) == 0) {
         r *= 0.75;
         Raindrop d = new Raindrop(int(random(drops[0].r, width-drops[0].r)), 0.05, r);
